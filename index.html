@@ -60,7 +60,7 @@ h1{font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.08;font-weight:700;letter-sp
 .cat{padding:56px 0 72px}
 .cat h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin:0 0 8px;font-weight:700}
 .lead{color:var(--mute);margin:0 0 28px;max-width:60ch}
-.lay{display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start}
+.lay{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start}.lay>*{min-width:0}
 aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
 .srch{width:100%;min-height:48px;border:1px solid var(--line);border-radius:99px;padding:0 20px;background:var(--card);color:var(--ink);font:400 1rem 'Geologica',system-ui,sans-serif;margin-bottom:16px}
 .srch:focus-visible{outline-color:#0072B6}
@@ -72,7 +72,7 @@ aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
 .grp{margin-bottom:40px}
 .grp h3{display:flex;align-items:baseline;gap:12px;font-size:1.35rem;margin:0 0 14px;font-weight:600;letter-spacing:-.01em}
 .grp h3 span{font-size:.9rem;font-weight:400;color:var(--mute)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:12px}
 .it{display:flex;flex-direction:column;gap:12px;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:14px 16px}
 .it b{font-weight:600;line-height:1.35}
 .it div{display:flex;align-items:center;justify-content:space-between;gap:8px}
@@ -87,7 +87,7 @@ aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 88px)}
 footer{padding:40px 0;color:var(--mute);font-size:.9rem}
 @media (max-width:860px){
 .hero .wrap{grid-template-columns:1fr;padding-top:40px;padding-bottom:40px}.caps{width:min(100%,280px);margin:0}
-.lay{grid-template-columns:1fr;gap:20px}
+.lay{grid-template-columns:minmax(0,1fr);gap:20px}
 aside{position:static}
 .fl{flex-direction:row;overflow-x:auto;padding-bottom:8px}.fl button{white-space:nowrap;border:1px solid var(--line);flex:none}
 nav.top{display:none}}
